@@ -100,6 +100,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  cursor: none !important;
 }
 
 
@@ -284,35 +285,56 @@ h1 {
   margin-top: 40px;
 }
 
+.cta-devis {
+  position: relative; /* pour que l'overlay soit positionné dedans */
+  display: inline-block;
+  overflow: hidden; /* cache l'animation hors bouton */
+  border-radius: 99px; /* même que le bouton */
+}
+
 .cta-devis a {
+  position: relative; /* devant l'overlay */
+  z-index: 2;
   text-decoration: none;
   color: #0F1319;
   font-family: 'inter-medium', sans-serif;
   font-size: 20px;
-  background-color: #FFFDFB;
+  background-color: transparent;
   border: 2px solid #F4541E;
   border-radius: 99px;
   padding: 20px 48px;
-  transition: all 0.3s ease-in-out;
-  display: inline-block; /* pour que padding soit bien pris en compte */
+  transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  display: inline-block;
 }
 
-.cta-devis a:hover {
-  color: #FFFDFB;
-  background-color: #F4541E;
-  border-color: #F4541E; /* même couleur que la bordure */
-  /* border-radius et padding identiques, pas besoin de les répéter */
+.cta-devis .ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: #F4541E;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  transition: width 0.5s ease, height 0.5s ease, opacity 0.7s ease;
 }
+
+
+.cta-devis:hover a {
+  color: #FFFDFB;
+  border-color: #F4541E;
+}
+
 
 .cta-devis a i {
   margin-left: 8px;
   transition: margin-left 0.3s ease-in-out;
 }
 
-.cta-devis a:hover i {
-  margin-left: 28px; /* augmente l'espace au hover */
+.cta-devis:hover a i {
+  margin-left: 28px; /* agrandit l’espace au hover */
 }
-
 
 
 
