@@ -1,0 +1,165 @@
+.footer {
+  background-color: #101010;
+  font-family: 'inter-regular', sans-serif;
+  font-size: 16px;
+}
+
+.footer h3 {
+  margin-right: 80px;
+  display: flex;
+  justify-content: flex-end;
+  font-family: 'Manjari-Bold';
+  font-weight: 400;
+  font-size: 10vw;
+  overflow: hidden;
+  padding-top: 40px;
+  padding-bottom: 20px;
+
+
+
+  color: transparent; /* texte non rempli */
+  -webkit-text-stroke: 2px #F4541E; /* contour orange */
+}
+
+hr {
+  height: 1.2px;
+  border: none;
+  background-color: #F4541E;
+}
+
+.nav-footer1,
+.nav-footer2,
+.social-media {
+  margin-left: 80px;
+  margin-right: 80px;
+  padding: 40px 0px 40px 0px;
+  display: flex;
+  gap: 40px;
+}
+
+
+.nav-footer1 a,
+.nav-footer2 a,
+.social-media a {
+  position: relative;
+  text-decoration: none;
+  color: #F1E8CA;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.social-media a {
+  font-size: 28px;
+  transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #C1BAA2;
+}
+
+.nav-footer1 a::after,
+.nav-footer2 a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 1px;
+  background-color: #F1E8CA;
+  transition: width 0.3s ease;
+}
+
+.nav-footer1 a:hover::after,
+.nav-footer2 a:hover::after {
+  width: 100%;
+}
+
+
+
+footer p {
+  color: #F1E8CA;
+}
+
+.footer-lastline {
+  margin-left: 80px;
+  padding: 40px 0px 40px 0px;
+  font-size: 12px;
+}
+
+.mobile-nav-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+
+@media (max-width: 1400px) {
+  .footer h3 {
+    margin-right: 40px;
+  }
+
+  .mobile-nav-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .nav-footer1,
+  .nav-footer2 {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+
+  }
+
+  .nav-footer1 {
+    margin-left: 40px;
+    align-items: flex-start;
+  }
+
+  .nav-footer2 {
+    margin-right: 40px;
+    align-items: flex-end;
+  }
+
+  .nav-footer1 a,
+  .nav-footer2 a {
+    white-space: nowrap;
+  }
+
+
+  .social-media {
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 40px 0;
+  }
+
+  .footer-lastline {
+    margin: 0;
+    text-align: center;
+    padding: 20px 0;
+  }
+}
+
+@media (max-width: 720px) {
+  .footer h3 {
+    justify-content: center;
+    margin: 0;
+  }
+  .mobile-nav-footer {
+    flex-direction: column;
+  }
+
+  .nav-footer1,
+  .nav-footer2 {
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    padding-top: 40px;
+  }
+
+  .social-media {
+    padding-top: 80px;
+  }
+
+}
