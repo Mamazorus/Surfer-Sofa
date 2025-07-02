@@ -88,3 +88,18 @@ ripple.addEventListener('transitionend', () => {
   }
 });
 
+function handleCursorResponsive() {
+  if (window.innerWidth >= 900) {
+    document.body.classList.add('custom-cursor');
+    cursor.style.display = 'block';
+  } else {
+    document.body.classList.remove('custom-cursor');
+    cursor.style.display = 'none';
+  }
+}
+
+// Initial check
+handleCursorResponsive();
+
+// Re-check on resize
+window.addEventListener('resize', handleCursorResponsive);
