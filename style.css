@@ -115,7 +115,7 @@ header{
   padding: 0 20px;
   background-color: #FFFDFB;
   border: 2px solid #F4541E;
-  border-radius: 9999px;
+  border-radius: 80px;
   font-family: 'Inter-Medium', sans-serif;
   box-sizing: border-box;
   z-index: 1000;
@@ -154,3 +154,73 @@ background: #FFFDFB;
 }
 
 
+.nav-right a {
+  position: relative;
+  color: #0F1319;
+  font-family: 'Inter-Medium', sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  padding-left: 15px;
+}
+
+/* Point médian */
+.nav-right a::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) translateX(-5px);
+  opacity: 0;
+  color: #F4541E;
+  font-size: 28px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-right a::after {
+  content: '';
+  position: absolute;
+  left: 15px; /* commence après le point */
+  bottom: -3px;
+  height: 2px;
+  width: 0%;
+  background-color: #F4541E;
+  transition: width 0.4s ease;
+  z-index: 1;
+}
+
+.nav-right a:hover::after {
+  width: calc(100% - 15px); /* -15px à gauche (point) et -15px à droite (équilibrage) */
+}
+
+
+
+.nav-right a:hover {
+  color: #F4541E;
+}
+
+.nav-right a:hover::before {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+
+.logo-nav img {
+  height: 26px;
+  width: auto; 
+  display: block; 
+}
+
+.star {
+  height: 30px;
+  width: auto; 
+  display: block; 
+  margin-right: 0; 
+  cursor: pointer;
+  transition: transform 0.8s ease-in-out, height 0.8s ease-in-out;
+}
+
+
+.star:hover {
+  transform: rotate(360deg); 
+  height: 32px;
+}
