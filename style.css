@@ -239,13 +239,24 @@ header {
   display: block; 
   margin-right: 0; 
   cursor: pointer;
-  transition: transform 0.8s ease-in-out, height 0.8s ease-in-out;
+  margin-right: 1px;
+  transition: transform 0.8s ease-in-out, height 0.8s ease-in-out, margin-right 0.8s ease-in-out;
 }
 
 
 .star:hover {
   transform: rotate(360deg); 
   height: 32px;
+  margin-right: 10px;
+}
+
+.star path {
+  stroke: #0F1319; 
+  transition: stroke 0.8s ease;
+}
+
+.star:hover path {
+  stroke: #F4541E;
 }
 
 
