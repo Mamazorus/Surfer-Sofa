@@ -29,7 +29,7 @@ body {
 
 .footer-firstLine ::selection,
 .title-hero ::selection{
-  background: #FFFDFB; 
+  background: transparent; 
   color: #F4541E;
 }
 
