@@ -55,6 +55,15 @@
 }
 
 @font-face {
+  font-family: 'inter-bold';
+  src: url('./fonts/Inter_18pt-Bold.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
   font-family: 'vina-sans';
   src: url('./fonts/VinaSans-Regular.ttf') format('truetype');
   font-weight: 400;
@@ -99,9 +108,25 @@ body {
   background: #FFFDFB;
 }
 
-header{
+header {
   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px; /* même hauteur que ta navbar */
+  background: linear-gradient(
+    to bottom,
+    #FFFDFB 0%,
+    rgba(255, 253, 251, 0) 100%
+  );
+  z-index: 999;
+  display: flex;
+  align-items: center; /* pour centrer le contenu verticalement */
+  padding: 0 80px; /* comme ta navbar */
+  box-sizing: border-box;
 }
+
+
 
 .navbar {
   position: fixed;
@@ -148,10 +173,7 @@ header{
   height: 40px; /* tu peux ajuster selon ton logo */
 }
 
-main {
-height: 50vh;  
-background: #FFFDFB;
-}
+
 
 
 .nav-right a {
@@ -223,4 +245,102 @@ background: #FFFDFB;
 .star:hover {
   transform: rotate(360deg); 
   height: 32px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;     
+  justify-content: center;
+  height: 100vh;            
+  height: 80vh;
+  background-color: #FFFDFB;
+}
+
+
+h1 {
+  font-family: 'Manjari-Bold';
+  font-weight: 400;
+  font-size: 10vw;
+  overflow: hidden;
+  color: transparent; 
+  -webkit-text-stroke: 2px #F4541E; 
+}
+
+.cta-devis{
+  margin-top: 40px;
+}
+
+.cta-devis a {
+  text-decoration: none;
+  color: #0F1319;
+  font-family: 'inter-medium', sans-serif;
+  font-size: 20px;
+  background-color: #FFFDFB;
+  border: 2px solid #F4541E;
+  border-radius: 99px;
+  padding: 20px 48px;
+  transition: all 0.3s ease-in-out;
+  display: inline-block; /* pour que padding soit bien pris en compte */
+}
+
+.cta-devis a:hover {
+  color: #FFFDFB;
+  background-color: #F4541E;
+  border-color: #F4541E; /* même couleur que la bordure */
+  /* border-radius et padding identiques, pas besoin de les répéter */
+}
+
+.cta-devis a i {
+  margin-left: 8px;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.cta-devis a:hover i {
+  margin-left: 28px; /* augmente l'espace au hover */
+}
+
+
+
+
+
+@media (max-width: 900px) {
+  .nav-right {
+    display: none;
+  }
+
+  .logo-nav {
+    display: none;
+  }
+
+  .navbar {
+    position: fixed;
+    top: 20px;
+    left: 40px;
+    right: 40px;
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #FFFDFB;
+    border: 2px solid #F4541E;
+    border-radius: 80px;
+    font-family: 'Inter-Medium', sans-serif;
+    box-sizing: border-box;
+    z-index: 1000;
+  }
 }
