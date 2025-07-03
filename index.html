@@ -43,7 +43,7 @@
           </svg>
         </div>
         <a class="classic-bnt-nav" href="#service">Services</a>
-        <a class="classic-bnt-nav" href="#">Créations</a>
+        <a class="classic-bnt-nav" href="#création">Créations</a>
         <a class="classic-bnt-nav" href="#">À propos</a>
       </div>
     </nav>
@@ -93,7 +93,7 @@
         </div>
       </div>
     </section>
-    <section class="devis-section">
+    <section id="cta-rappel" class="devis-section">
       <div class="devis-image devis-image-left"></div>
       <div class="devis-content">
         <div class="devis-text">
@@ -108,6 +108,54 @@
       </div>
       <div class="devis-image devis-image-right"></div>
     </section>
+    
+    <section id="création" class="carousel-section">
+      <div class="carousel-container">
+          <h2 class="carousel-title">· Mes créations</h2>
+          
+          <div class="carousel-wrapper">
+              <div class="carousel-track">
+                  <div class="carousel-slide">
+                      <div class="carousel-image project-1">
+                          <span>Projet 1</span>
+                      </div>
+                  </div>
+                  <div class="carousel-slide">
+                      <div class="carousel-image project-2">
+                          <span>Projet 2</span>
+                      </div>
+                  </div>
+                  <div class="carousel-slide">
+                      <div class="carousel-image project-3">
+                          <span>Projet 3</span>
+                      </div>
+                  </div>
+                  <div class="carousel-slide">
+                      <div class="carousel-image project-4">
+                          <span>Projet 4</span>
+                      </div>
+                  </div>
+                  <div class="carousel-slide">
+                      <div class="carousel-image project-5">
+                          <span>Projet 5</span>
+                      </div>
+                  </div>
+              </div>
+              
+              <button class="carousel-nav prev" onclick="changeSlide(-1)">‹</button>
+              <button class="carousel-nav next" onclick="changeSlide(1)">›</button>
+          </div>
+          
+          <div class="carousel-indicators">
+              <span class="carousel-indicator active" onclick="currentSlide(1)"></span>
+              <span class="carousel-indicator" onclick="currentSlide(2)"></span>
+              <span class="carousel-indicator" onclick="currentSlide(3)"></span>
+              <span class="carousel-indicator" onclick="currentSlide(4)"></span>
+              <span class="carousel-indicator" onclick="currentSlide(5)"></span>
+          </div>
+      </div>
+  </section>
+
   </main>
 
 
