@@ -113,16 +113,17 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  height: 80px; /* même hauteur que ta navbar */
-  background: linear-gradient(
-    to bottom,
-    #FFFDFB 0%,
-    rgba(255, 253, 251, 0) 100%
-  );
+  height: 80px;
+  /* même hauteur que ta navbar */
+  background: linear-gradient(to bottom,
+      #FFFDFB 0%,
+      rgba(255, 253, 251, 0) 100%);
   z-index: 999;
   display: flex;
-  align-items: center; /* pour centrer le contenu verticalement */
-  padding: 0 80px; /* comme ta navbar */
+  align-items: center;
+  /* pour centrer le contenu verticalement */
+  padding: 0 80px;
+  /* comme ta navbar */
   box-sizing: border-box;
 }
 
@@ -161,6 +162,7 @@ header {
 
 .nav-right {
   margin-right: 40px;
+  padding-left: 40px;
 }
 
 .nav-left {
@@ -170,7 +172,8 @@ header {
 
 .icon-nav img,
 .logo-nav img {
-  height: 40px; /* tu peux ajuster selon ton logo */
+  height: 40px;
+  /* tu peux ajuster selon ton logo */
 }
 
 
@@ -202,7 +205,8 @@ header {
 .nav-right a::after {
   content: '';
   position: absolute;
-  left: 15px; /* commence après le point */
+  left: 15px;
+  /* commence après le point */
   bottom: -3px;
   height: 2px;
   width: 0%;
@@ -212,7 +216,8 @@ header {
 }
 
 .nav-right a:hover::after {
-  width: calc(100% - 15px); /* -15px à gauche (point) et -15px à droite (équilibrage) */
+  width: calc(100% - 15px);
+  /* -15px à gauche (point) et -15px à droite (équilibrage) */
 }
 
 
@@ -228,30 +233,30 @@ header {
 
 .logo-nav img {
   height: 26px;
-  width: auto; 
-  display: block; 
+  width: auto;
+  display: block;
 }
 
 .star {
   height: 30px;
-  width: auto; 
-  display: block; 
-  margin-right: 0; 
+  width: auto;
+  display: block;
+  margin-right: 0;
   cursor: pointer;
   margin-right: 1px;
-  transition: transform 0.8s ease-in-out, height 0.8s ease-in-out, margin-right 0.8s ease-in-out;
+  transition: transform 0.3s ease-in-out, height 0.3s ease-in-out, margin-right 0.3s ease-in-out;
 }
 
 
 .star:hover {
-  transform: rotate(360deg); 
+  transform: rotate(360deg);
   height: 32px;
   margin-right: 10px;
 }
 
 .star path {
-  stroke: #0F1319; 
-  transition: stroke 0.8s ease;
+  stroke: #0F1319;
+  transition: stroke 0.3s ease;
 }
 
 .star:hover path {
@@ -274,12 +279,31 @@ header {
 .hero-section {
   display: flex;
   flex-direction: column;
-  align-items: center;     
+  align-items: center;
   justify-content: center;
-  height: 100vh;            
   height: 80vh;
   background-color: #FFFDFB;
+  position: relative;
+  /* important pour positionner .hero-caption */
 }
+
+.hero-caption {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  padding-left: 80px;
+  /* espace depuis la gauche de l'écran */
+  font-size: 16px;
+  letter-spacing: -0.48px;
+  /* -3% */
+  color: #0F1319;
+}
+
+.hero-caption p {
+  font-family: 'inter-light', sans-serif;
+  /* vérifie que cette fonte est bien chargée */
+}
+
 
 
 h1 {
@@ -287,23 +311,27 @@ h1 {
   font-weight: 400;
   font-size: 10vw;
   overflow: hidden;
-  color: transparent; 
-  -webkit-text-stroke: 2px #F4541E; 
+  color: transparent;
+  -webkit-text-stroke: 2px #F4541E;
 }
 
-.cta-devis{
+.cta-devis {
   margin-top: 40px;
 }
 
 .cta-devis {
-  position: relative; /* pour que l'overlay soit positionné dedans */
+  position: relative;
+  /* pour que l'overlay soit positionné dedans */
   display: inline-block;
-  overflow: hidden; /* cache l'animation hors bouton */
-  border-radius: 99px; /* même que le bouton */
+  overflow: hidden;
+  /* cache l'animation hors bouton */
+  border-radius: 99px;
+  /* même que le bouton */
 }
 
 .cta-devis a {
-  position: relative; /* devant l'overlay */
+  position: relative;
+  /* devant l'overlay */
   z-index: 2;
   text-decoration: none;
   color: #0F1319;
@@ -343,8 +371,205 @@ h1 {
 }
 
 .cta-devis:hover a i {
-  margin-left: 28px; /* agrandit l’espace au hover */
+  margin-left: 28px;
+  /* agrandit l’espace au hover */
 }
+
+
+
+
+
+
+
+.services-section {
+  padding: 80px;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.services-container-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  /* Ajuste cette valeur selon tes besoins */
+}
+
+.services-title {
+  text-align: left;
+  margin-bottom: 40px;
+  font-size: 48px;
+  font-weight: bold;
+  font-family: 'Inter-Medium', sans-serif;
+}
+
+.services-container {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F6EFE9;
+  border-radius: 10px;
+  padding: 20px;
+  width: 33.333%;
+  box-sizing: border-box;
+}
+
+.service-image {
+  border-radius: 5px;
+  width: 100%;
+  height: 35vh;
+  background-color: #F4541E;
+  margin-bottom: 20px;
+}
+
+.service-text {
+  font-family: 'Inter-Light', sans-serif;
+  text-align: left;
+  color: #0F1319;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.service-button {
+  font-family: 'Inter-Medium', sans-serif;
+  align-self: flex-end;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #0F1319;
+  border: 2px solid #F4541E;
+  border-radius: 20px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease;
+  z-index: 1;
+}
+
+.service-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #F4541E;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+
+.service-button:hover {
+  color: #FFFDFB;
+}
+
+.service-button:hover::before {
+  transform: scaleX(1);
+}
+
+@media (max-width: 930px) {
+  .services-section {
+    padding: 40px;
+  }
+
+  .services-container-wrapper {
+    width: 75%;
+  }
+
+  .services-title {
+    margin-bottom: 20px;
+  }
+
+  .services-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .service-card {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+.devis-section {
+  position: relative;
+  padding: 80px 80px 80px 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.devis-image {
+  width: 45%;
+  height: 300px;
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+.devis-image-left {
+  position: absolute;
+  left: -20vw;
+}
+
+.devis-image-right {
+  position: absolute;
+  right: -20vw;
+}
+
+.devis-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  z-index: 1;
+  text-align: center;
+}
+
+.devis-text {
+  margin-bottom: 20px;
+  padding-left: 100px;
+  padding-right: 100px;
+  color: #0F1319;
+  font-family: 'Inter-Light', sans-serif;
+}
+
+@media (max-width: 900px) {
+  .devis-section {
+    padding: 40px;
+    flex-direction: column;
+  }
+
+  .devis-image {
+    display: none;
+  }
+
+  .devis-content {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .devis-image-left,
+  .devis-image-right {
+    position: static;
+  }
+}
+
+
+
+
+
+
 
 .burger-icon {
   opacity: 0;
@@ -352,7 +577,7 @@ h1 {
 }
 
 
-@media (max-width: 900px) {
+@media (max-width: 930px) {
   .classic-bnt-nav {
     display: none;
   }
@@ -375,7 +600,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 0px;
     background-color: #FFFDFB;
     border: 2px solid #F4541E;
     border-radius: 80px;
@@ -384,11 +609,28 @@ h1 {
     z-index: 1000;
   }
 
+  .cta-devis {
+    width: calc(100% - 80px);
+    box-sizing: border-box;
+  }
+
+  .cta-devis a {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-caption {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    padding-left: 40px;
+    font-size: 16px;
+    letter-spacing: -0.48px;
+    color: #0F1319;
+  }
 
 }
-
-
-
 
 
 
@@ -423,36 +665,4 @@ h1 {
 
 .burger-icon.active .bottom {
   transform: translateY(-8px) translateX(-8px) rotate(-45deg);
-}
-
-
-
-
-.side-menu {
-  position: fixed;
-  top: 0;
-  right: -25vw;
-  width: 25vw;
-  height: 100vh;
-  background-color: #F1E8CA;
-  border-left: 2px solid #101010;
-  transition: right 0.3s ease;
-  z-index: 1000;
-  padding: 80px 40px 80px 40px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.side-nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-  position: relative;
-}
-
-.langue-burger {
-  padding-top: 80px;
 }
