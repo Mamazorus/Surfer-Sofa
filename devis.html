@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Devis - Surfer Sofa</title>
+  <meta name="description"
+    content="Demandez un devis gratuit pour la rénovation de vos fauteuils, canapés et chaises. Surfer Sofa, tapissière artisanale en France.">
+
+  <link rel="icon" href="img/logo.png" type="image/png">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="devis.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="curseur.css">
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="nav-header">
+        <div class="nav-left">
+          <a href="index.html" class="sans-bar">
+            <svg id="star" class="star" width="34" height="34" viewBox="0 0 34 34" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M26.9167 12.75V8.5C26.9167 7.74855 26.6182 7.02788 26.0868 6.49653C25.5554 5.96518 24.8348 5.66666 24.0833 5.66666H9.91667C9.16522 5.66666 8.44455 5.96518 7.9132 6.49653C7.38184 7.02788 7.08333 7.74855 7.08333 8.5V12.75M26.9167 12.75C27.6681 12.75 28.3888 13.0485 28.9201 13.5799C29.4515 14.1112 29.75 14.8319 29.75 15.5833V22.6667C29.75 23.4181 29.4515 24.1388 28.9201 24.6701C28.3888 25.2015 27.6681 25.5 26.9167 25.5M26.9167 12.75C26.1652 12.75 25.4446 13.0485 24.9132 13.5799C24.3818 14.1112 24.0833 14.8319 24.0833 15.5833V18.4167H9.91667V15.5833C9.91667 14.8319 9.61816 14.1112 9.0868 13.5799C8.55545 13.0485 7.83478 12.75 7.08333 12.75M7.08333 12.75C6.33189 12.75 5.61122 13.0485 5.07986 13.5799C4.54851 14.1112 4.25 14.8319 4.25 15.5833V22.6667C4.25 23.4181 4.54851 24.1388 5.07986 24.6701C5.61122 25.2015 6.33189 25.5 7.08333 25.5M7.08333 25.5H26.9167M7.08333 25.5V28.3333M26.9167 25.5V28.3333"
+                stroke="#0F1319" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+          <a class="logo-nav" href="index.html"><img src="SVG/logo-texte.svg" alt="Logo Surfer Sofa" /></a>
+        </div>
+        <div class="nav-right">
+          <div class="burger-icon" id="burger-toggle">
+            <svg class="burger-svg" width="30" height="30" viewBox="0 0 30 25" fill="none"
+              xmlns="http://www.w3.org/2000/svg" style="overflow: visible;">
+              <rect class="bar top" width="30" height="3" rx="1.5" fill="#0F1319" />
+              <rect class="bar middle" y="11" width="30" height="3" rx="1.5" fill="#0F1319" />
+              <rect class="bar bottom" y="22" width="30" height="3" rx="1.5" fill="#0F1319" />
+            </svg>
+          </div>
+          <a class="classic-bnt-nav" href="index.html#service">Services</a>
+          <a class="classic-bnt-nav" href="index.html#création">Créations</a>
+          <a class="classic-bnt-nav" href="index.html#propos">À propos</a>
+        </div>
+      </div>
+
+      <!-- Menu burger qui s'étend naturellement -->
+      <div class="burger-menu" id="burger-menu">
+        <div class="burger-menu-links">
+          <a href="index.html#service">Services</a>
+          <a href="index.html#création">Créations</a>
+          <a href="index.html#propos">À propos</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="home">
+    <div class="espace-nav"></div>
+    <section class="devis-section">
+      <div class="texte-gauche">
+        <h1 class="titre-devis">· Devis</h1>
+        <h2 class="titre-secondaire">Besoin d'un conseil ? d'une information ?<br>Contactez-MOI !</h2>
+        <p class="texte-paragraphe">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse luctus massa ac odio accumsan porta.<br><br>
+          Pellentesque vel tempus leo. Sed at tortor pharetra, sodales turpis ut, maximus risus. Morbi cursus bibendum vulputate.
+        </p>
+      </div>
+    
+      <!-- Formulaire avec Formspree -->
+      <!-- Remplacez YOUR_FORM_ID par votre ID Formspree -->
+      <form class="formulaire-devis" action="https://formspree.io/f/xdkzjqja" method="POST" enctype="multipart/form-data">
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" name="nom" required>
+    
+        <label for="prenom">Prénom</label>
+        <input type="text" id="prenom" name="prenom" required>
+    
+        <label for="email">Adresse email</label>
+        <input type="email" id="email" name="email" required>
+    
+        <label for="telephone">Téléphone</label>
+        <input type="tel" id="telephone" name="telephone">
+    
+        <label for="message">Rédiger votre message ici</label>
+        <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
+        
+        <!--<label for="images">Ajouter des photos (optionnel)</label>
+        <div class="file-upload-container">
+          <input type="file" id="images" name="images" accept="image/*" multiple class="file-input">
+          <label for="images" class="file-label">
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+            <span>Choisir des images</span>
+          </label>
+          <div class="file-info">
+            <span class="file-count">Aucun fichier sélectionné</span>
+            <span class="file-size-info">Max. 10 Mo au total - Formats: JPG, PNG, GIF</span>
+          </div>
+          <div class="file-list"></div>
+        </div>-->
+    
+        <div class="checkbox-container">
+          <input type="checkbox" id="consent" name="consent" required>
+          <label for="consent" class="small-text">
+            J'accepte que mes données soient collectées pour le traitement de ma demande.
+          </label>
+        </div>
+    
+        <button type="submit">Envoyer</button>
+      </form>
+    </section>
+  </main>
+
+  <footer id="section-footer" class="footer">
+    <div class="fade-text">
+      <div class="footer-firstLine">
+        <h4 class="footer-BigText">Surfer Sofa</h4>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="mobile-nav-footer">
+      <div class="nav-footer1">
+        <a href="index.html#service">Services</a>
+        <a href="index.html#création">Créations</a>
+        <a href="index.html#propos">À propos</a>
+      </div>
+
+      <div class="nav-footer2">
+        <a href="#home">Devis gratuit</a>
+        <a href="#mentions">Mentions légales</a>
+      </div>
+    </div>
+
+    <div class="social-media">
+      <a href="https://www.instagram.com/surfer_sofa_/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+
+    <div class="footer-flex">
+      <div>
+        <p class="footer-title basteleur">Support</p>
+        <p class="footer-paragraphe">Site vitrine</p>
+      </div>
+
+      <div>
+        <p class="footer-title basteleur">Professions</p>
+        <p>Tapissier</p>
+      </div>
+
+      <div>
+        <p class="footer-title basteleur">Mise à jour</p>
+        <p>2025</p>
+      </div>
+    </div>
+
+    <div class="footer-lastline">
+      <p>SURFER SOFA · TOUS DROITS RÉSERVÉS</p>
+    </div>
+  </footer>
+
+  <div id="custom-cursor"></div>
+  <script src="https://kit.fontawesome.com/3b3604d1b9.js" crossorigin="anonymous" async></script>
+  <script src="https://unpkg.com/lenis@1.1.21/dist/lenis.min.js"></script>
+  <script src="script.js"></script>
+  <script src="file-upload.js"></script>
+
+</body>
+
+</html>

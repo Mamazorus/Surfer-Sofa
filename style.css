@@ -284,7 +284,7 @@ header {
   font-family: 'inter-light', sans-serif;
 }
 
-h1 {
+.title-hero h1 {
   font-family: 'Manjari-Bold';
   font-weight: 400;
   font-size: 10vw;
