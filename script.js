@@ -1,7 +1,9 @@
+// Smooth scroll avec Lenis
 const lenis = new Lenis({
   autoRaf: true,
 });
 
+// Smooth scroll pour les ancres
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
@@ -18,6 +20,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+// Curseur personnalisé
 const cursor = document.getElementById('custom-cursor');
 
 document.addEventListener('mousemove', (e) => {
@@ -36,7 +39,7 @@ clickableElements.forEach((el) => {
   });
 });
 
-// ---- Ripple sur tous les boutons .cta-devis ----
+// Ripple effect sur tous les boutons .cta-devis
 document.querySelectorAll('.cta-devis').forEach(cta => {
   const ripple = cta.querySelector('.ripple');
 
@@ -87,6 +90,7 @@ document.querySelectorAll('.cta-devis').forEach(cta => {
   });
 });
 
+// Gestion responsive du curseur
 function handleCursorResponsive() {
   if (window.innerWidth >= 930) {
     document.body.classList.add('custom-cursor');
@@ -103,130 +107,132 @@ handleCursorResponsive();
 // Re-check on resize
 window.addEventListener('resize', handleCursorResponsive);
 
+// Menu burger
 const burger = document.querySelector('.burger-icon');
-const sideMenu = document.querySelector('.side-menu');
-const navbar = document.querySelector('.navbar');
+const burgerMenu = document.querySelector('.burger-menu');
 
 burger.addEventListener('click', () => {
   burger.classList.toggle('active');
-  sideMenu.classList.toggle('active');
-  navbar.classList.toggle('menu-expanded', sideMenu.classList.contains('active'));
+  burgerMenu.classList.toggle('active');
 });
 
+// Fermer le menu en cliquant à l'extérieur
 document.addEventListener('click', (event) => {
   const isClickInsideBurger = burger.contains(event.target);
-  const isClickInsideMenu = sideMenu.contains(event.target);
+  const isClickInsideMenu = burgerMenu.contains(event.target);
 
-  if (!isClickInsideBurger && !isClickInsideMenu && sideMenu.classList.contains('active')) {
-    sideMenu.classList.remove('active');
+  if (!isClickInsideBurger && !isClickInsideMenu && burgerMenu.classList.contains('active')) {
+    burgerMenu.classList.remove('active');
     burger.classList.remove('active');
-    navbar.classList.remove('menu-expanded');
   }
 });
 
-document.querySelectorAll('.side-menu a').forEach(link => {
+// Fermer le menu quand on clique sur un lien
+document.querySelectorAll('.burger-menu-links a').forEach(link => {
   link.addEventListener('click', () => {
-    sideMenu.classList.remove('active');
+    burgerMenu.classList.remove('active');
     burger.classList.remove('active');
-    navbar.classList.remove('menu-expanded');
   });
 });
 
-
-
+// Carousel
 let currentSlideIndex = 0;
-        const slides = document.querySelectorAll('.carousel-slide');
-        const indicators = document.querySelectorAll('.carousel-indicator');
-        const track = document.querySelector('.carousel-track');
-        const carouselWrapper = document.querySelector('.carousel-wrapper');
-        let autoSlideInterval;
-        let isAutoSliding = true;
+const slides = document.querySelectorAll('.carousel-slide');
+const indicators = document.querySelectorAll('.carousel-indicator');
+const track = document.querySelector('.carousel-track');
+const carouselWrapper = document.querySelector('.carousel-wrapper');
+let autoSlideInterval;
+let isAutoSliding = true;
 
-        function updateCarousel() {
-            const translateX = -currentSlideIndex * 100;
-            track.style.transform = `translateX(${translateX}%)`;
-            
-            // Update indicators
-            indicators.forEach((indicator, index) => {
-                indicator.classList.toggle('active', index === currentSlideIndex);
-            });
-        }
+function updateCarousel() {
+  const translateX = -currentSlideIndex * 100;
+  track.style.transform = `translateX(${translateX}%)`;
+  
+  // Update indicators
+  indicators.forEach((indicator, index) => {
+    indicator.classList.toggle('active', index === currentSlideIndex);
+  });
+}
 
-        function changeSlide(direction) {
-            currentSlideIndex += direction;
-            
-            if (currentSlideIndex >= slides.length) {
-                currentSlideIndex = 0;
-            } else if (currentSlideIndex < 0) {
-                currentSlideIndex = slides.length - 1;
-            }
-            
-            updateCarousel();
-        }
+function changeSlide(direction) {
+  currentSlideIndex += direction;
+  
+  if (currentSlideIndex >= slides.length) {
+    currentSlideIndex = 0;
+  } else if (currentSlideIndex < 0) {
+    currentSlideIndex = slides.length - 1;
+  }
+  
+  updateCarousel();
+}
 
-        function currentSlide(index) {
-            currentSlideIndex = index - 1;
-            updateCarousel();
-        }
+function currentSlide(index) {
+  currentSlideIndex = index - 1;
+  updateCarousel();
+}
 
-        function startAutoSlide() {
-            if (isAutoSliding) {
-                autoSlideInterval = setInterval(() => {
-                    changeSlide(1);
-                }, 5000);
-            }
-        }
+function startAutoSlide() {
+  if (isAutoSliding) {
+    autoSlideInterval = setInterval(() => {
+      changeSlide(1);
+    }, 5000);
+  }
+}
 
-        function stopAutoSlide() {
-            clearInterval(autoSlideInterval);
-        }
+function stopAutoSlide() {
+  clearInterval(autoSlideInterval);
+}
 
-        function resumeAutoSlide() {
-            if (isAutoSliding) {
-                startAutoSlide();
-            }
-        }
+function resumeAutoSlide() {
+  if (isAutoSliding) {
+    startAutoSlide();
+  }
+}
 
-        // Event listeners pour pause/resume
-        carouselWrapper.addEventListener('mouseenter', stopAutoSlide);
-        carouselWrapper.addEventListener('mouseleave', resumeAutoSlide);
+// Event listeners pour pause/resume
+carouselWrapper.addEventListener('mouseenter', stopAutoSlide);
+carouselWrapper.addEventListener('mouseleave', resumeAutoSlide);
 
-        // Démarrer le carrousel automatique
-        startAutoSlide();
+// Démarrer le carrousel automatique
+startAutoSlide();
 
-        // Support du clavier
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowLeft') {
-                changeSlide(-1);
-            } else if (e.key === 'ArrowRight') {
-                changeSlide(1);
-            }
-        });
+// Support du clavier
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'ArrowLeft') {
+    changeSlide(-1);
+  } else if (e.key === 'ArrowRight') {
+    changeSlide(1);
+  }
+});
 
-        // Support tactile pour mobile
-        let touchStartX = 0;
-        let touchEndX = 0;
+// Support tactile pour mobile
+let touchStartX = 0;
+let touchEndX = 0;
 
-        carouselWrapper.addEventListener('touchstart', (e) => {
-            touchStartX = e.changedTouches[0].screenX;
-            stopAutoSlide();
-        });
+carouselWrapper.addEventListener('touchstart', (e) => {
+  touchStartX = e.changedTouches[0].screenX;
+  stopAutoSlide();
+});
 
-        carouselWrapper.addEventListener('touchend', (e) => {
-            touchEndX = e.changedTouches[0].screenX;
-            handleSwipe();
-            resumeAutoSlide();
-        });
+carouselWrapper.addEventListener('touchend', (e) => {
+  touchEndX = e.changedTouches[0].screenX;
+  handleSwipe();
+  resumeAutoSlide();
+});
 
-        function handleSwipe() {
-            const swipeThreshold = 50;
-            const diff = touchStartX - touchEndX;
-            
-            if (Math.abs(diff) > swipeThreshold) {
-                if (diff > 0) {
-                    changeSlide(1); // Swipe left - next slide
-                } else {
-                    changeSlide(-1); // Swipe right - previous slide
-                }
-            }
-        }
+function handleSwipe() {
+  const swipeThreshold = 50;
+  const diff = touchStartX - touchEndX;
+  
+  if (Math.abs(diff) > swipeThreshold) {
+    if (diff > 0) {
+      changeSlide(1); // Swipe left - next slide
+    } else {
+      changeSlide(-1); // Swipe right - previous slide
+    }
+  }
+}
+
+// Fonctions globales pour les boutons onclick du carousel
+window.changeSlide = changeSlide;
+window.currentSlide = currentSlide;
