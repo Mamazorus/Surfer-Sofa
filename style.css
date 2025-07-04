@@ -1029,7 +1029,7 @@ h1 {
 }
 
 
-@media (max-width: 930px) {
+@media (max-width: 1050px) {
   .grille {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, auto);
@@ -1044,6 +1044,8 @@ h1 {
     padding: 40px 40px;
   }
 }
+
+
 
 @media (max-width: 930px) {
   .grille {
@@ -1074,4 +1076,29 @@ h1 {
   .a-propos-section {
     padding: 40px 40px;
   }
+}
+
+
+
+@media (max-width: 550px) {
+  .grille {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .grille > div {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+  }
+
+  .case1 { order: 1; border-top-right-radius: 10px; border-top-left-radius: 10px; }
+  .case2 { order: 2; border-radius: 0px; }
+  .case3 { order: 3; border-radius: 0px; }
+  .case4 { order: 4; border-radius: 0px; }
+  .case5 { order: 6; border-radius: 0px; }
+  .case6 { order: 5; border-radius: 0px; }
+  .case7 { order: 7; border-radius: 0px; display: none;}
+  .case8 { order: 8; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
+
+
 }
