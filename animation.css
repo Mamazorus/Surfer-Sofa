@@ -1,0 +1,353 @@
+/* ==========================================================================
+   ANIMATIONS GLOBALES - SURFER SOFA
+   ========================================================================== */
+
+/* ==========================================================================
+   1. ANIMATIONS DE BASE
+   ========================================================================== */
+
+/* Fade In Up - Apparition du bas vers le haut */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade In Down - Apparition du haut vers le bas */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade In Left - Apparition de la gauche */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Fade In Right - Apparition de la droite */
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Fade In - Simple apparition */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Scale In - Apparition avec zoom */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ==========================================================================
+   2. CLASSES D'ANIMATION RÉUTILISABLES
+   ========================================================================== */
+
+/* Classes pour appliquer les animations */
+.animate-fade-in {
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.animate-fade-in-up {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.animate-fade-in-down {
+  opacity: 0;
+  animation: fadeInDown 0.8s ease forwards;
+}
+
+.animate-fade-in-left {
+  opacity: 0;
+  animation: fadeInLeft 0.8s ease forwards;
+}
+
+.animate-fade-in-right {
+  opacity: 0;
+  animation: fadeInRight 0.8s ease forwards;
+}
+
+.animate-scale-in {
+  opacity: 0;
+  animation: scaleIn 0.8s ease forwards;
+}
+
+/* ==========================================================================
+   3. DÉLAIS D'ANIMATION
+   ========================================================================== */
+
+/* Délais prédéfinis */
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+.delay-5 { animation-delay: 0.5s; }
+.delay-6 { animation-delay: 0.6s; }
+.delay-7 { animation-delay: 0.7s; }
+.delay-8 { animation-delay: 0.8s; }
+.delay-9 { animation-delay: 0.9s; }
+.delay-10 { animation-delay: 1s; }
+
+/* ==========================================================================
+   4. ANIMATIONS SPÉCIFIQUES AUX SECTIONS
+   ========================================================================== */
+
+/* Hero Section */
+.title-hero h1 {
+  opacity: 0;
+  animation: fadeInUp 1s ease 0.2s forwards;
+}
+
+.cta-devis {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease 0.4s forwards;
+}
+
+.hero-caption {
+  opacity: 0;
+  animation: fadeIn 0.8s ease 0.6s forwards;
+}
+
+/* Services Section */
+.services-title {
+  opacity: 0;
+  animation: fadeInLeft 0.8s ease forwards;
+}
+
+.service-card {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.service-card:nth-child(1) { animation-delay: 0.2s; }
+.service-card:nth-child(2) { animation-delay: 0.3s; }
+.service-card:nth-child(3) { animation-delay: 0.4s; }
+
+/* Devis Section */
+.devis-content {
+  opacity: 0;
+  animation: scaleIn 0.8s ease 0.2s forwards;
+}
+
+.devis-text {
+  opacity: 0;
+  animation: fadeIn 0.8s ease 0.3s forwards;
+}
+
+/* Carousel Section */
+.carousel-title {
+  opacity: 0;
+  animation: fadeInLeft 0.8s ease forwards;
+}
+
+.carousel-wrapper {
+  opacity: 0;
+  animation: fadeIn 1s ease 0.2s forwards;
+}
+
+.carousel-indicators {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease 0.4s forwards;
+}
+
+/* À propos Section */
+.a-propos-section .titre {
+  opacity: 0;
+  animation: fadeInLeft 0.8s ease forwards;
+}
+
+.grille {
+  opacity: 0;
+  animation: fadeIn 1s ease 0.2s forwards;
+}
+
+.grille > div {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.case1 { animation-delay: 0.1s; }
+.case2 { animation-delay: 0.15s; }
+.case3 { animation-delay: 0.2s; }
+.case4 { animation-delay: 0.25s; }
+.case5 { animation-delay: 0.3s; }
+.case6 { animation-delay: 0.35s; }
+.case7 { animation-delay: 0.4s; }
+.case8 { animation-delay: 0.45s; }
+
+/* Footer */
+.footer-BigText {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease 0.1s forwards;
+}
+
+.nav-footer1,
+.nav-footer2,
+.social-media,
+.footer-flex {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease 0.3s forwards;
+}
+
+/* ==========================================================================
+   5. ANIMATIONS AU SCROLL (avec IntersectionObserver)
+   ========================================================================== */
+
+/* Classes pour les éléments qui s'animent au scroll */
+.scroll-animate {
+  opacity: 0;
+  transition: none;
+}
+
+.scroll-animate.in-view {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.scroll-animate-left.in-view {
+  animation: fadeInLeft 0.8s ease forwards;
+}
+
+.scroll-animate-right.in-view {
+  animation: fadeInRight 0.8s ease forwards;
+}
+
+.scroll-animate-scale.in-view {
+  animation: scaleIn 0.8s ease forwards;
+}
+
+/* ==========================================================================
+   6. ANIMATIONS HOVER AVANCÉES
+   ========================================================================== */
+
+/* Hover avec ondulation */
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* Rotation continue */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Pulsation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Classes utilitaires */
+.hover-lift {
+  transition: transform 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+}
+
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+.hover-rotate:hover {
+  animation: rotate 0.6s ease;
+}
+
+.hover-pulse:hover {
+  animation: pulse 1s ease infinite;
+}
+
+/* ==========================================================================
+   7. OPTIMISATIONS PERFORMANCE
+   ========================================================================== */
+
+/* Désactiver les animations pour les préférences utilisateur */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ==========================================================================
+   8. UTILITAIRES
+   ========================================================================== */
+
+/* Durées d'animation personnalisées */
+.duration-fast { animation-duration: 0.3s; }
+.duration-normal { animation-duration: 0.6s; }
+.duration-slow { animation-duration: 1s; }
+.duration-slower { animation-duration: 1.5s; }
+
+/* Timing functions */
+.ease-bounce { animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+.ease-smooth { animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+
+/* Visibilité initiale */
+.will-animate {
+  opacity: 0;
+}

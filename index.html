@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="footer.css">
   <link rel="stylesheet" href="curseur.css">
+  <link rel="stylesheet" href="animation.css">
 </head>
 
 <body>
@@ -22,7 +23,7 @@
     <nav class="navbar">
       <div class="nav-header">
         <div class="nav-left">
-          <a href="#home" class="sans-bar">
+          <a href="#home" class="sans-bar" title="Accueil Surfer Sofa">
             <svg id="star" class="star" width="34" height="34" viewBox="0 0 34 34" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
@@ -30,7 +31,8 @@
                 stroke="#0F1319" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </a>
-          <a class="logo-nav" href="index.html"><img src="SVG/logo-texte.svg" alt="Logo Surfer Sofa" /></a>
+          <a class="logo-nav" href="index.html"><img src="SVG/logo-texte.svg"
+              alt="Logo Surfer Sofa - Tapissière artisanale France" /></a>
         </div>
         <div class="nav-right">
           <div class="burger-icon" id="burger-toggle">
@@ -41,8 +43,10 @@
               <rect class="bar bottom" y="22" width="30" height="3" rx="1.5" fill="#0F1319" />
             </svg>
           </div>
-          <a class="classic-bnt-nav" href="#service">Services</a>
-          <a class="classic-bnt-nav" href="#création">Créations</a>
+          <a class="classic-bnt-nav" href="#service"
+            title="Découvrir nos services de restauration de mobilier">Services</a>
+          <a class="classic-bnt-nav" href="#création"
+            title="Voir nos réalisations de tapisserie artisanale">Créations</a>
           <a class="classic-bnt-nav" href="#propos">À propos</a>
         </div>
       </div>
@@ -64,7 +68,8 @@
         <h1>Surfer Sofa</h1>
       </div>
       <div class="cta-devis">
-        <a href="devis.html">DEVIS <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="devis.html" title="Demander un devis gratuit pour rénovation de fauteuil">DEVIS <i
+            class="fa-solid fa-arrow-right"></i></a>
         <div class="ripple"></div>
       </div>
       <!--<div class="hero-caption">
@@ -77,25 +82,30 @@
         <div class="services-title">· MES SERVICES</div>
         <div class="services-container">
           <div class="service-card">
-            <div class="service-image" style="background-image: url('img/fauteuil\ grain\ 2\ .jpg');"></div>
+            <div class="service-image" style="background-image: url('img/fauteuil\ grain\ 2\ .jpg');" role="img"
+              aria-label="Fauteuil rénové par Surfer Sofa - Tapisserie artisanale avec tissu texturé grain beige"></div>
             <div class="service-text">
               Rénovation de fauteuils
             </div>
             <!--<button class="service-button">En savoir plus</button>-->
           </div>
           <div class="service-card">
-            <div class="service-image" style="background-image: url('img/canapé\ vert\ face\ 1.jpg');"></div>
+            <div class="service-image" style="background-image: url('img/canapé\ vert\ face\ 1.jpg');" role="img"
+              aria-label="Canapé vert restauré par tapissier professionnel - Rénovation complète avec tissu velours">
+            </div>
             <div class="service-text">
               Rénovation de canapés
             </div>
             <!--<button class="service-button">En savoir plus</button>-->
           </div>
           <div class="service-card">
-            <div class="service-image" style="background-image: url('img/banquette\ design\ 1.jpg');"></div>
+            <div class="service-image" style="background-image: url('img/banquette\ design\ 1.jpg');" role="img"
+              aria-label="Banquette design rénovée - Restauration artisanale de sièges et banquettes par Surfer Sofa">
+            </div>
             <div class="service-text">
               Rénovation de chaises et banquettes
             </div>
-           <!-- <button class="service-button">En savoir plus</button>-->
+            <!-- <button class="service-button">En savoir plus</button>-->
           </div>
         </div>
       </div>
@@ -110,7 +120,8 @@
           écoute et dévouement. Parlons-en !
         </div>
         <div class="cta-devis">
-          <a href="devis.html">DEVIS <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="devis.html" title="Demander un devis gratuit pour rénovation de fauteuil">DEVIS <i
+              class="fa-solid fa-arrow-right"></i></a>
           <div class="ripple"></div>
         </div>
       </div>
@@ -124,37 +135,43 @@
         <div class="carousel-wrapper">
           <div class="carousel-track">
             <div class="carousel-slide">
-              <div class="carousel-image project-1" style="background-image: url('img/siege\ blanc\ et\ bois\ 1.jpg');">
+              <div class="carousel-image project-1" style="background-image: url('img/siege\ blanc\ et\ bois\ 1.jpg');"
+                role="img"
+                aria-label="Siège scandinave blanc et bois restauré - Création artisanale tapissier Surfer Sofa">
               </div>
             </div>
             <div class="carousel-slide">
-              <div class="carousel-image project-2" style="background-image: url('img/banquette\ 2.jpg');">
+              <div class="carousel-image project-2" style="background-image: url('img/banquette\ 2.jpg');" role="img"
+                aria-label="Banquette vintage rénovée avec tissu moderne - Transformation de meuble par tapissière">
               </div>
             </div>
             <div class="carousel-slide">
-              <div class="carousel-image project-3" style="background-image: url('img/fauteuil\ jaune.jpg');">
+              <div class="carousel-image project-3" style="background-image: url('img/fauteuil\ jaune.jpg');" role="img"
+                aria-label="Fauteuil jaune moutarde rénové - Restauration complète par artisan tapissier">
               </div>
             </div>
             <div class="carousel-slide">
-              <div class="carousel-image project-4" style="background-image: url('img/fauteuil\ orange\ 1.jpg');">
+              <div class="carousel-image project-4" style="background-image: url('img/fauteuil\ orange\ 1.jpg');"
+                role="img" aria-label="Fauteuil orange vintage restauré - Réfection artisanale de siège années 70">
               </div>
             </div>
             <div class="carousel-slide">
-              <div class="carousel-image project-5" style="background-image: url('img/3\ chaises\ 1.jpg');">
+              <div class="carousel-image project-5" style="background-image: url('img/3\ chaises\ 1.jpg');" role="img"
+                aria-label="Trio de chaises rénovées - Transformation complète par tapissière professionnelle">
               </div>
             </div>
           </div>
 
-          <button class="carousel-nav prev" onclick="changeSlide(-1)">‹</button>
-          <button class="carousel-nav next" onclick="changeSlide(1)">›</button>
+          <button class="carousel-nav prev" onclick="changeSlide(-1)" aria-label="Image précédente">‹</button>
+          <button class="carousel-nav next" onclick="changeSlide(1)" aria-label="Image suivante">›</button>
         </div>
 
         <div class="carousel-indicators">
-          <span class="carousel-indicator active" onclick="currentSlide(1)"></span>
-          <span class="carousel-indicator" onclick="currentSlide(2)"></span>
-          <span class="carousel-indicator" onclick="currentSlide(3)"></span>
-          <span class="carousel-indicator" onclick="currentSlide(4)"></span>
-          <span class="carousel-indicator" onclick="currentSlide(5)"></span>
+          <span class="carousel-indicator active" onclick="currentSlide(1)" aria-label="Aller à l'image 1"></span>
+          <span class="carousel-indicator" onclick="currentSlide(2)" aria-label="Aller à l'image 2"></span>
+          <span class="carousel-indicator" onclick="currentSlide(3)" aria-label="Aller à l'image 3"></span>
+          <span class="carousel-indicator" onclick="currentSlide(4)" aria-label="Aller à l'image 4"></span>
+          <span class="carousel-indicator" onclick="currentSlide(5)" aria-label="Aller à l'image 5"></span>
         </div>
       </div>
     </section>
@@ -170,7 +187,8 @@
         </div>
 
         <div class="case2">
-          <img src="img/fauteuil grain 1.jpg" alt="Image 1">
+          <img src="img/fauteuil grain 1.jpg"
+            alt="Fauteuil club rénové avec tissu grain - Exemple de restauration artisanale Surfer Sofa">
         </div>
 
         <div class="case3">
@@ -180,11 +198,13 @@
         </div>
 
         <div class="case4">
-          <img src="img/fauteuil vert 1.jpg" alt="Image 2">
+          <img src="img/fauteuil vert 1.jpg"
+            alt="Fauteuil vert émeraude restauré - Savoir-faire tapissier traditionnel français">
         </div>
 
         <div class="case5">
-          <img src="img/fauteuil orange 1.jpg" alt="Image 3">
+          <img src="img/fauteuil orange 1.jpg"
+            alt="Fauteuil orange contemporain rénové - Expertise tapissière en restauration de mobilier">
         </div>
 
         <div class="case6">
@@ -194,11 +214,12 @@
         </div>
 
         <div class="case7">
-          <img src="img/banquette 2.jpg" alt="Image 4">
+          <img src="img/banquette 2.jpg" alt="Banquette moderne rénovée - Création sur-mesure par artisan tapissier">
         </div>
 
         <div class="case8">
-          <a href="https://www.instagram.com/surfer_sofa_/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.instagram.com/surfer_sofa_/" target="_blank" title="Suivre Surfer Sofa sur Instagram"><i
+              class="fa-brands fa-instagram"></i></a>
         </div>
       </div>
     </section>
@@ -224,12 +245,13 @@
 
       <div class="nav-footer2">
         <a href="devis.html">Devis gratuit</a>
-        <a href="#mentions">Mentions légales</a>
+        <a href="mentions legales.html">Mentions légales</a>
       </div>
     </div>
 
     <div class="social-media">
-      <a href="https://www.instagram.com/surfer_sofa_/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.instagram.com/surfer_sofa_/" target="_blank" title="Suivre Surfer Sofa sur Instagram"><i
+          class="fa-brands fa-instagram"></i></a>
     </div>
 
     <div class="footer-flex">

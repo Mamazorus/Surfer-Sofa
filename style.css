@@ -1362,3 +1362,241 @@ header {
 
 
 }
+
+/* Mentions légales - Styles spécifiques */
+
+/* Espace après la navbar */
+.espace-nav {
+  height: 160px;
+}
+
+/* Section principale */
+.mentions-section {
+  padding: 0px 80px 80px 80px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.mentions-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Titre principal */
+.titre-mentions {
+  text-align: left;
+  margin-bottom: 40px;
+  font-size: 48px;
+  font-weight: bold;
+  font-family: 'Inter-Medium', sans-serif;
+  color: #0F1319;
+}
+
+/* Contenu des mentions */
+.mentions-content {
+  background: #f9f7f7;
+  padding: 60px;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+/* Blocs de mentions */
+.mention-block {
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+  border-bottom: 2px solid rgba(244, 84, 30, 0.2);
+}
+
+.mention-block:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+/* Titres des sections */
+.mention-block h2 {
+  font-family: 'Inter-Medium', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: #0F1319;
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 20px;
+}
+
+/* Point orange avant les titres */
+.mention-block h2::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #F4541E;
+  font-size: 32px;
+}
+
+/* Paragraphes */
+.mention-block p {
+  font-family: 'Inter-Light', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #0F1319;
+  margin-bottom: 16px;
+}
+
+.mention-block p:last-child {
+  margin-bottom: 0;
+}
+
+/* Texte en gras */
+.mention-block strong {
+  font-family: 'Inter-Medium', sans-serif;
+  color: #0F1319;
+  font-weight: 500;
+}
+
+/* Responsive - Tablette */
+@media (max-width: 930px) {
+  .espace-nav {
+    height: 120px;
+  }
+
+  .mentions-section {
+    padding: 0px 40px 80px 40px;
+  }
+
+  .titre-mentions {
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
+
+  .mentions-content {
+    padding: 40px;
+  }
+
+  .mention-block {
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+  }
+
+  .mention-block h2 {
+    font-size: 20px;
+  }
+
+  .mention-block p {
+    font-size: 15px;
+  }
+}
+
+/* Responsive - Mobile */
+@media (max-width: 550px) {
+  .espace-nav {
+    height: 100px;
+  }
+
+  .mentions-section {
+    padding: 0px 20px 60px 20px;
+  }
+
+  .titre-mentions {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .mentions-content {
+    padding: 30px 20px;
+    box-shadow: rgba(100, 100, 111, 0.1) 0px 4px 15px 0px;
+  }
+
+  .mention-block {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(244, 84, 30, 0.15);
+  }
+
+  .mention-block h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .mention-block h2::before {
+    font-size: 28px;
+  }
+
+  .mention-block p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}
+
+/* Animation au scroll (optionnel) */
+.mention-block {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.mention-block:nth-child(1) { animation-delay: 0.1s; }
+.mention-block:nth-child(2) { animation-delay: 0.2s; }
+.mention-block:nth-child(3) { animation-delay: 0.3s; }
+.mention-block:nth-child(4) { animation-delay: 0.4s; }
+.mention-block:nth-child(5) { animation-delay: 0.5s; }
+.mention-block:nth-child(6) { animation-delay: 0.6s; }
+.mention-block:nth-child(7) { animation-delay: 0.7s; }
+.mention-block:nth-child(8) { animation-delay: 0.8s; }
+.mention-block:nth-child(9) { animation-delay: 0.9s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Lien retour (optionnel - à ajouter dans le HTML si souhaité) */
+.retour-accueil {
+  display: inline-block;
+  margin-top: 40px;
+  font-family: 'Inter-Medium', sans-serif;
+  font-size: 16px;
+  color: #0F1319;
+  text-decoration: none;
+  border: 2px solid #F4541E;
+  border-radius: 99px;
+  padding: 16px 32px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.retour-accueil::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #F4541E;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+
+.retour-accueil:hover {
+  color: #FFFDFB;
+}
+
+.retour-accueil:hover::before {
+  transform: scaleX(1);
+}
+
+.retour-accueil i {
+  margin-right: 8px;
+  transition: margin-right 0.3s ease;
+}
+
+.retour-accueil:hover i {
+  margin-right: 12px;
+}
