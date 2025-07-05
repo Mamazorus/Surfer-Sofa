@@ -356,7 +356,6 @@ header {
 
 .services-container-wrapper {
   width: 100%;
-  max-width: 1200px;
 }
 
 .services-title {
@@ -509,7 +508,6 @@ header {
 
 .carousel-container {
   position: relative;
-  max-width: 1200px;
   margin: 0 auto;
   z-index: 2;
 }
@@ -789,6 +787,15 @@ header {
     position: relative;
     margin-bottom: -160px;
   }
+  
+  .devis-text {
+  margin-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  color: #0F1319;
+  font-family: 'Inter-Light', sans-serif;
+}
+
 
   .title-hero h1 {
     font-family: 'Manjari-Bold';
@@ -968,7 +975,7 @@ header {
 
 @media (max-width: 930px) {
   .devis-section {
-    padding: 0px;
+    padding: 40px 0px 80px 0px;
     flex-direction: column;
   }
 
@@ -1035,13 +1042,29 @@ header {
   gap: 0px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 10px;
+  
 }
 
 .case {
   background: #FFFDFB;
   padding: 20px;
   position: relative;
+  justify-items: center;
+  
 }
+
+.grille > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.case1, .case3, .case6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* si tu veux aussi centrer verticalement */
+}
+
+
 
 .titre-case {
   font-family: 'Inter-Medium', sans-serif;
